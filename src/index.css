@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  font-family: Oswald;
+  margin: 0;
+}
+
+body, html, #root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(248, 248, 248);
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+.container {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cube, .side {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+
+.side {
+  background: white;
+  cursor: grab;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.game__options {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.game__start-button {
+  cursor: pointer;
+  margin-top: 500px;
+  border: none;
+  background-color: transparent;
+  font-size: 48px;
+}
+
+.game__grid-size {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+}
+
+.game__grid-size span:first-child {
+  font-size: 32px;
+}
+
+
+.game__grid-size input {
+  background-color: transparent;
+  outline: none !important;
+  width: 40px;
+  height: 28px;
+  font-size: 22px;
+}
