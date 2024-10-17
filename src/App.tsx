@@ -62,7 +62,7 @@ function App() {
       gsap.set(".container", {
         zIndex: i => 100-i
       })      
-    }, [gridWidth, gridHeight, grid]
+    }, [gridWidth, gridHeight]
   )
 
   const handleCubeClick = useCallback((x: number, y: number) => {
